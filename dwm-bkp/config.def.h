@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Default color scheme */
-#include "/home/tdr/.dwm/themes/dark_pastel.h"
+#include "/home/tuxraldo/.dwm/themes/dark_pastel.h"
 
 /* appearance */
 static const unsigned int borderpx  	  = 2;        /* border pixel of windows */
