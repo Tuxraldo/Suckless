@@ -1,0 +1,72 @@
+#
+#     ______ _    ____  ___
+#     |  _  \ |  | |  \/  |
+#     | | | | |  | | .  . |
+#     | | | | |/\| | |\/| |
+#     | |/ /\  /\  / |  | |
+#     |___/  \/  \/\_|  |_/
+#
+#
+#	dwm by: Tuxraldo
+#	Github: @Tuxraldo
+#	
+# 
+#-----------------------------------------------------------------------------#
+
+
+# ---> Informações gerais
+
+- Além dos patches oficiais do projeto, utilizo o sxhkd para os atalhos dos programas/scripts. Para as demais tarefas utilizo:
+
+Editor: vim
+Gerenciador de arquivos: thunar
+Gerenciador de senhas: KeePassXC
+Lançador de aplicações: rofi 
+Navegador: firefox
+Player: SMPlayer/cmus
+Papel de parede: feh
+PDF: zathura
+Terminal: xfce4-terminal
+
+# ---> Patches aplicados
+
+1) actualfullscreen
+- Permite um fullscreen real.
+Link: https://dwm.suckless.org/patches/actualfullscreen/dwm-actualfullscreen-20211013-cb3f58a.diff
+
+2) autostart
+- Adiciona um script em $HOME/.dwm chamado autostart. Nele é possível inicar scripts, serviços etc. junto com a sessão do dwm.
+Link: https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff
+
+3) Bar Height
+- Adiciona a opção de definir o tamanho da barra padrão do dwm.
+Link: https://dwm.suckless.org/patches/bar_height/dwm-bar-height-6.2.diff
+
+4) "Ewmhtags" e "Focusonnetactive" 
+- Os dois são adicionados com o intuito de permitir que aplicações mudem entre programas de áreas de trabalhos diferentes. Ex: o modo "window" do Rofi ou o script dmenu-switch. Por padrão não é possível fazer isso no dwm.
+Link: https://dwm.suckless.org/patches/ewmhtags/dwm-ewmhtags-6.2.diff
+      https://dwm.suckless.org/patches/focusonnetactive/dwm-focusonnetactive-6.2.diff
+
+5) Focus Adjacent Tag
+- Permite a troca entre ás áreas de trabalho, anterior e próxima, e a "jogar" uma janela para as áreas de trabalho adjacentes, ou seja, róxima/anterior.
+Link: https://dwm.suckless.org/patches/focusadjacenttag/dwm-focusadjacenttag-6.3.diff
+
+6) Fullgaps
+- patch simples que adiciona gaps e a possibilidade de aumentar, diminuir ou remover os gaps via atalhos de teclado.
+Link: https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
+
+7) Movestack
+- Permite mover as janelas de posição, funciona em sentido horário.
+Link: https://dwm.suckless.org/patches/movestack/dwm-movestack-20211115-a786211.diff
+
+8) Status2d (systray)
+- Esse patch tem dupla função, adiciona a opção de mudar as cores dos itens na barra e, ao mesmo tempo, adiciona uma systray.
+Link: https://dwm.suckless.org/patches/status2d/dwm-status2d-systray-6.4.diff
+
+9) Systraysize
+- Encontrei esse patch no r/suckless. Um user modificou o comportamento padrão da systray, possibilitando que o usuário modifique o tamanho dos ícones dela via config.def.h
+- Como o patch está mal formado, é OBRIGATORIO, adiciona-lo manualmente. Ou seja, abrir o aquivo e inserir as modificações no config.def.h e no dwm.c manualmente.
+
+10) Vertical/horizontal i3like
+Link: https://dwm.suckless.org/patches/horizontal-vertical-i3/
+- Muda a função "incnmaster" padrão para apenas trocar o layout das janelas entre vertical e horizontal.
