@@ -111,7 +111,7 @@ unsigned int tabspaces = 8;
 float alpha = 0.95;
 
 /* Terminal colors (16 first used in escape sequence) */
-#include </home/tdr/.dwm/st-themes/dark_pastels.h>
+#include </home/tuxraldo/.dwm/st-themes/dark_pastels.h>
 //static const char *colorname[] = {
 //	/* 8 normal colors */
 //	"black",
