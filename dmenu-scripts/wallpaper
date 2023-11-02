@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# dmenu theme
+. $HOME/.local/bin/dmenu-scripts/dmenu-theming
+
+cd "$HOME/Imagens"
+
+# Lista todos os arquivos do diretório Imagens
+# excluindo o subdoretório 'prints'.
+file=$(find ./ -type f -not -path '*/Prints/*' | sort | dmenu -p 'Wallpaper:' $font $lines $colors)
+[ -z "$file" ] && exit
+
+feh --bg-fill "$file" &
+

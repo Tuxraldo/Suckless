@@ -1,0 +1,34 @@
+# -----> dmenu configs
+
+# Colors
+# nb = normal background
+# nf = normal foreground (text)
+# sb = selected background
+# sf = selected foreground (text)
+
+# Options
+# -l + ºn = abre o dmenu em forma de lista vertical
+# -g + ºn = abre em formato de colunas, só funciona se usado junto com o -l
+# -x = retorna o comportamento do tab para o padrão
+# -b = posiciona o dmenu na parte de baixo da tela
+# -i = habilita a busca case insensitive
+
+
+# -----> Global
+lines="-l 15 -i"
+font="-fn JetBrainsMonoNerdFont-9"
+
+# -----> Dark Pastels
+colors="-nb #3F3F3F -nf #D8CAAC -sb #DCA3A3 -sf #3F3F3F"
+
+# -----> Everforest
+#colors="-nb #323D43 -nf #D8CAAC -sb #83A589 -sf #323D43"
+
+# -----> Gruvbox-Dark
+#colors="-nb #32302F -nf #ebdbb2 -sb #D3869B -sf #32302F"
+
+# -----> Nord
+#colors="-nb #2E3440 -nf #D8DEE9 -sb #81A1C1 -sf #2E3440"
+
+
+

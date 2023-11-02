@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# ---> dmenu theme
+. $HOME/.local/bin/dmenu-scripts/dmenu-theming
+
+cd "$HOME/Imagens"
+
+file=$(find ./ | sort | dmenu -p 'Pictures:' $lines $font $colors)
+[ -z "$file" ] && exit
+
+feh -F --start-at "$file" &

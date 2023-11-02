@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+# dmenu theming
+. $HOME/.local/bin/dmenu-scripts/dmenu-theming
+
+first_prompt="i3 central"
+opt1="Keybinds\ni3 info\nConfig\ni3status\nPolybar\nUser Guide"
+opt2="Yes\nNo"
+conf="$HOME/.config/i3/config"
+
+ask() {
+    answer="$( echo -e $1 | dmenu -i -p "$2" $lines $colors $font $center )"
+}
+
+ask "$opt1" "$first_prompt"
+
+case $answer in
+    "Keybinds")
+        if [[ -e "$conf" ]]; then
+            linha=$(grep bindsym "$conf" | dmenu -p "Keybinds:" $lines $font $colors $center $size) &&
+            xfce4-terminal -x vim +/"$linha" "$conf"
+   else
+           echo "O arquivo de configuração NÃO existe!" | dmenu -p "Keybinds:" $lines $font $colors $size
+        fi
+        exit 0
+        ;;
+
+    "i3 info")
+           i3 --more | dmenu -p "i3 info:" $lines $font $colors $center
+        exit 0
+        ;;
+
+    "Config")
+            xfce4-terminal -x vim $HOME/.config/i3/config
+        exit 0
+        ;;
+
+    "i3status config")
+             xfce4-terminal -x vim $HOME/.config/i3status/config
+        exit 0
+        ;;
+     "Polybar")
+             xfce4-terminal -x vim $HOME/.config/polybar
+     exit 0
+     ;;
+
+   "User Guide")
+     firefox /usr/share/doc/i3/userguide.html
+     exit 0
+     ;;
+esac
+
+exit 0

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# dmenu theming
+. $HOME/.local/bin/dmenu-scripts/dmenu-theming
+
+prompt="-p Manual:"
+
+# terminal to open manual
+terminal="xfce4-terminal -x"
+
+# list all manuals
+manual="$(man -k . | dmenu $prompt $lines $colors $font | awk '{print $1}')"
+
+# open selected manual with terminal
+if [[ ! -z "$manual" ]]; then
+    eval "$terminal "man $manual" --title "Mansearch - Manual Viewer""
+fi
+
+exit 0
+
+

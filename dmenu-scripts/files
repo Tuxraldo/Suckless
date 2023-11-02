@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# dmenu theming
+. $HOME/.local/bin/dmenu-scripts/dmenu-theming
+
+DMEDITOR="xfce4-terminal -x nvim"
+
+# An array of options to choose.
+# You can edit this list to add/remove config files.
+declare -a options=(
+"alacritty - $HOME/.config/alacritty/alacritty.yml"
+"anotações - $HOME/Documentos/Anotações.md"
+"autostart - $HOME/.dwm/autostart.sh"
+"alias - $HOME/.bash_aliases"
+"dmenu - $HOME/.local/bin/dmenu-scripts/dmenu-theming"
+"picom - $HOME/.config/picom.conf"
+"statusbar - $HOME/.dwm/statusbar/status-bar.sh"
+"sxhkd - $HOME/.config/sxhkd/sxhkdrc"
+"vimrc - $HOME/.vim/vimrc"
+"xresources - $HOME/.Xresources"
+"quit"
+)
+
+# Piping the above array into dmenu.
+# We use "printf '%s\n'" to format the array one item to a line.
+choice=$(printf '%s\n' "${options[@]}" | dmenu $prompt $lines $colors $font -l 10 -i -p 'Files:')
+
+# What to do when/if we choose 'quit'.
+if [[ "$choice" == "quit" ]]; then
+    echo "Program terminated." && exit 1
+
+# What to do when/if we choose a file to edit.
+elif [ "$choice" ]; then
+	cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
+	$DMEDITOR "$cfg"
+
+# What to do if we just escape without choosing anything.
+else
+    echo "Program terminated." && exit 1
+fi
