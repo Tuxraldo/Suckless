@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Sonokai Atlantis colors
+
+black="#2A2F38"
+red="#FF6578"
+green="#9DD274"
+yellow="#EACB64"
+blue="#72CCE8"
+purple="#BA9CF3"
+cyan="#F69C5E"
+white="#E1E3E4"
+gray="#FFE3E4"
+
+FG="#FFE3E4"
+BG="#2A2F38"
+LABEL="#9DD274"
+cmus="#EACB64"

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Gruvbox-Dark Color Scheme
+
+black="#32302F"
+red="#FB4934"
+#green="#B8BB26"
+green="#7a7e65"
+yellow="#FABD2F"
+blue="#83A598"
+purple="#d792a5"
+cyan="#8EC07C"
+white="#FFF1C6"
+gray="#A89984"
+
+FG="#F2E5BC"
+BG="#32302F"
+LABEL="#d792a5"
+cmus="#B8BB26"
