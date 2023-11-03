@@ -10,7 +10,7 @@ picom --config $HOME/.dwm/picom-dwm.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Hotkey daemon -------------------------------------------------------#
-sxhkd -c ~/.dwm/sxhkdrc &
+sxhkd -c ~/.dwm/sxhkd &
 
 # Notification Daemon -------------------------------------------------#
 /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd &
